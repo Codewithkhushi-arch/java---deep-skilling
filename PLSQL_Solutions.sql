@@ -399,3 +399,38 @@ CREATE OR REPLACE PACKAGE BODY AccountOperations AS
     END GetTotalBalance;
 END AccountOperations;
 /
+
+/*
+==========================================
+SIMULATED OUTPUTS (Based on Sample Data)
+==========================================
+
+-- Exercise 1, Scenario 3 (Loan Reminders)
+-- No output expected with sample data (loan ends in 60 months, not 30 days)
+-- If loan ended within 30 days:
+Reminder: Customer John Doe, your loan 1 is due on 2026-07-15
+PL/SQL procedure successfully completed.
+
+-- Exercise 2, Scenario 1 (SafeTransferFunds)
+EXEC SafeTransferFunds(1, 2, 5000);
+Error: Insufficient funds in account 1
+PL/SQL procedure successfully completed.
+
+-- Exercise 2, Scenario 2 (UpdateSalary)
+EXEC UpdateSalary(99, 10);
+Error: Employee ID 99 does not exist.
+PL/SQL procedure successfully completed.
+
+-- Exercise 4, Scenario 1 (CalculateAge)
+SELECT CalculateAge(TO_DATE('1985-05-15', 'YYYY-MM-DD')) FROM DUAL;
+-- Output: 41 (Assuming current year is 2026)
+
+-- Exercise 6, Scenario 1 (GenerateMonthlyStatements)
+Customer: John Doe | Transaction: 1 | Type: Deposit | Amount: 200
+Customer: Jane Smith | Transaction: 2 | Type: Withdrawal | Amount: 300
+PL/SQL procedure successfully completed.
+
+-- Example output from Trigger (CheckTransactionRules)
+INSERT INTO Transactions (TransactionID, AccountID, TransactionDate, Amount, TransactionType) VALUES (3, 1, SYSDATE, 5000, 'Withdrawal');
+-- Output: ORA-20001: Withdrawal exceeds balance.
+*/
