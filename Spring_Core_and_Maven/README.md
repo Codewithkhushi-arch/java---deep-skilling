@@ -27,7 +27,6 @@ Spring Core and Maven/
 ├── Exercise8/           # Basic AOP Aspects (Before and After Advice)
 ├── Exercise9/           # Spring Boot REST API + Spring Data JPA + H2 Database
 │
-├── download_maven.py    # Python script to download local Maven binary
 └── README.md            # Execution outputs & documentation (This file)
 ```
 
@@ -195,11 +194,7 @@ All Spring Boot REST CRUD tests passed successfully!
 ## 🏃 How to Run Locally
 
 1. **Verify/Install Maven**:
-   If Maven is not installed globally, download it using the provided utility:
-   ```bash
-   python download_maven.py
-   ```
-   *This extracts Maven to `c:\Users\KHUSHI\Downloads\java skilling\maven\apache-maven-3.9.8\bin\mvn`*.
+   Ensure Apache Maven is installed on your system and configured in your environment PATH.
 
 2. **Run Spring Core Projects (Exercises 1–8)**:
    Navigate to the respective exercise folder and compile/execute:
