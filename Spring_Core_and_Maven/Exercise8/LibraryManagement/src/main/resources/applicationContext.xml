@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- Enable AspectJ auto-proxying -->
+    <aop:aspectj-autoproxy />
+
+    <!-- Define bean for BookRepository -->
+    <bean id="bookRepository" class="com.library.repository.BookRepository" />
+
+    <!-- Define bean for BookService and inject BookRepository -->
+    <bean id="bookService" class="com.library.service.BookService">
+        <property name="bookRepository" ref="bookRepository" />
+    </bean>
+
+    <!-- Register the logging aspect bean -->
+    <bean id="loggingAspect" class="com.library.aspect.LoggingAspect" />
+
+    <!-- Configure the Aspect -->
+    <aop:config>
+        <aop:aspect id="aopLoggingAspect" ref="loggingAspect">
+            <!-- Pointcut matches any method of BookService class -->
+            <aop:pointcut id="serviceMethods" expression="execution(* com.library.service.BookService.*(..))" />
+            <!-- Map advice methods to pointcut -->
+            <aop:before pointcut-ref="serviceMethods" method="logBefore" />
+            <aop:after pointcut-ref="serviceMethods" method="logAfter" />
+        </aop:aspect>
+    </aop:config>
+
+</beans>
