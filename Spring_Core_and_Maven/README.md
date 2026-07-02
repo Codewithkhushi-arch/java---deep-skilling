@@ -17,17 +17,17 @@ This repository contains a collection of 9 standalone hands-on exercises demonst
 ```text
 Spring Core and Maven/
 │
-├── Exercise1/           # Basic Spring Bean configuration using XML
-├── Exercise2/           # Spring XML Setter Injection
-├── Exercise3/           # Logging with Spring AOP (Around Advice)
-├── Exercise4/           # Maven compiler & multi-dependency configuration
-├── Exercise5/           # Standard IoC Container & Bean wiring
-├── Exercise6/           # Annotation-based configuration (@Service, @Repository, @Autowired)
-├── Exercise7/           # Side-by-side Constructor and Setter Injection
-├── Exercise8/           # Basic AOP Aspects (Before and After Advice)
-├── Exercise9/           # Spring Boot REST API + Spring Data JPA + H2 Database
+├── 01-spring-xml-basic-config/         # Basic Spring Bean configuration using XML
+├── 02-spring-setter-injection/         # Spring XML Setter Injection
+├── 03-spring-aop-around-logging/       # Logging with Spring AOP (Around Advice)
+├── 04-maven-dependency-compiler/       # Maven compiler & multi-dependency configuration
+├── 05-spring-ioc-wiring/               # Standard IoC Container & Bean wiring
+├── 06-spring-annotation-config/        # Annotation-based configuration (@Service, @Repository, @Autowired)
+├── 07-constructor-setter-injection/    # Side-by-side Constructor and Setter Injection
+├── 08-spring-aop-before-after/         # Basic AOP Aspects (Before and After Advice)
+├── 09-spring-boot-jpa-h2/              # Spring Boot REST API + Spring Data JPA + H2 Database
 │
-└── README.md            # Execution outputs & documentation (This file)
+└── README.md                           # Execution outputs & documentation (This file)
 ```
 
 ---

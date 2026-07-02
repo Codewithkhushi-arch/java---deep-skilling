@@ -46,9 +46,9 @@ cd orm-learn
 java -jar target/orm-learn-0.0.1-SNAPSHOT.jar
 ```
 
-**To run the `EmployeeManagementSystem` REST APIs:**
+**To run any specific Employee Management exercise (e.g., Exercise 10):**
 ```bash
-cd EmployeeManagementSystem
+cd 10-jpa-hibernate-batch-processing
 ../maven/apache-maven-3.9.8/bin/mvn.cmd clean package -DskipTests
 java -jar target/EmployeeManagementSystem-0.0.1-SNAPSHOT.jar
 ```
