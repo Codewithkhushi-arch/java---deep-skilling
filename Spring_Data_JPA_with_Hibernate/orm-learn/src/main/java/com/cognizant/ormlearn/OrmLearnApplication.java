@@ -1,7 +1,5 @@
 package com.cognizant.ormlearn;
 
-import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -12,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 
 import com.cognizant.ormlearn.model.Attempt;
 import com.cognizant.ormlearn.model.AttemptOption;
