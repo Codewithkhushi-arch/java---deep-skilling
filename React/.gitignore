@@ -1,0 +1,18 @@
+# Ignore Python scaffolding scripts
+*.py
+
+# Ignore extracted text documents
+text_docs/
+*.txt
+
+# Ignore Word Documents
+*.docx
+
+# Standard Node.js ignores
+node_modules/
+dist/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
